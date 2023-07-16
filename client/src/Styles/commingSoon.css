@@ -1,0 +1,13 @@
+  .card{
+    margin-left: 150px;
+    margin-top: 50px;
+    background-color: #40058A;
+  }
+
+  .h5{  /*Card-title */
+    color: white;
+  }
+  
+  .card-text{
+    color: white;
+  }

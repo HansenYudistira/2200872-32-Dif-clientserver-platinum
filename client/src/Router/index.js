@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage";
 import ProfilePage from "../Pages/ProfilePage";
 import Community from "../Pages/Community";
+import GameListPage from "../Pages/GameListPage";
 
 function Router() {
     return (
@@ -13,6 +14,8 @@ function Router() {
             <Route path="/" Component={LandingPage}/>
             <Route path="/ProfilePage" Component={ProfilePage} />
             <Route path="/community" Component={Community} />
+            <Route path="/Community" Component={Community} />
+            <Route path="/GameList" Component={GameListPage} />
         </Routes>
     )
 }

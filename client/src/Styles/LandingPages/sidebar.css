@@ -46,7 +46,7 @@
 .active{
     background: lightskyblue;
     color: #000;
-    margin:auto 25px;
+    /* margin:auto 25px; */
 }
 .icon, .link_text{
     font-size: 20px;

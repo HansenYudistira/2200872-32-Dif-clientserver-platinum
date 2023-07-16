@@ -12,7 +12,7 @@ function Router() {
         <Routes>
             <Route path="/" Component={LandingPage}/>
             <Route path="/ProfilePage" Component={ProfilePage} />
-            <Route path="/Community" Component={Community} />
+            <Route path="/community" Component={Community} />
         </Routes>
     )
 }

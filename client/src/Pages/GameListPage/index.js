@@ -3,6 +3,9 @@ import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button, Container } 
 
 import { gameListApi } from '../../api/gameListApi'
 
+//import css
+import '../../Styles/gamelist.css'
+
 function GameListPage() {
     // state
     const [gameslist, setGamelist] = useState({ data: [] })
@@ -25,22 +28,23 @@ function GameListPage() {
     }, []);
 
     return (
-        <div>
-            <Container className='my-5'>
+        <body>
+            <Container className='my-5 container'>
                 {gameslist.data.map(function (data) {
                     return (
                         <Card
                             style={{
                                 width: '18rem',
                                 height: '18rem',
-                                margin: '5px'
-                            }}
+                                margin: '10px',
+                                color: ' #29262d'
+                            }} className='cardClass'
                         >
                             <img
                                 alt="Sample"
-                                src='../../../public/images/game/rps.png'
+                                src='/images/game/rps.png'
                             />
-                            <CardBody>
+                            <CardBody className='cardClass'>
                                 <CardTitle tag="h5">
                                     {data.gameName}
                                 </CardTitle>
@@ -48,14 +52,14 @@ function GameListPage() {
                                     {data.gameDescription}
                                 </CardText>
                                 <Button>
-                                    Play Now
+                                    {data.gameUrl}
                                 </Button>
                             </CardBody>
                         </Card>
                     )
                 })}
             </Container>
-        </div>
+        </body>
     );
 }
 

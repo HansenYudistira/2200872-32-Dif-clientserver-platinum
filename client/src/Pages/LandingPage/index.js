@@ -7,7 +7,6 @@ import LandingPageHeader from '../../Component/LandingPage/header';
 import WelcomeCard from '../../Component/LandingPage/welcome';
 import PopularGames from '../../Component/LandingPage/popularGames';
 import LeaderBoard from '../../Component/LandingPage/leaderboard';
-import Sidebar from '../../Component/Sidebar';
 
 //import css
 import '../../Styles/LandingPages/landingPage.css'

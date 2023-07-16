@@ -1,7 +1,7 @@
 import React from 'react';
 import {  } from "reactstrap";
 
-import '../../Styles/community.css';
+import '../../Styles/LandingPages/community.css';
 import '../../Styles/table.css';
 
 

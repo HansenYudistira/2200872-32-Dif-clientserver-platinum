@@ -13,6 +13,7 @@ function Router() {
         <Routes>
             <Route path="/" Component={LandingPage}/>
             <Route path="/ProfilePage" Component={ProfilePage} />
+            <Route path="/community" Component={Community} />
             <Route path="/Community" Component={Community} />
             <Route path="/GameList" Component={GameListPage} />
         </Routes>

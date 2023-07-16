@@ -1,7 +1,7 @@
 import React from 'react';
 import {  } from "reactstrap";
 import Sidebar from '../../Component/Sidebar';
-import '../../Styles/LandingPages/community.css';
+import '../../Styles/community.css';
 
 function Community() {
   return (<body>

@@ -1,12 +1,12 @@
 import React from "react";
 import {  } from "reactstrap";
 
-function ProfilePage() {
+function RegisterPage() {
     return (
         <div>
-            HIIIIIIIIIIIaaa
+            THIS REGISTER PAGE
         </div>
     )
 }
 
-export default ProfilePage;
+export default RegisterPage

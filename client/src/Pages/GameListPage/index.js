@@ -3,6 +3,9 @@ import { Card, CardBody, CardTitle, CardText, Button, Container } from "reactstr
 
 import { gameListApi } from '../../api/gameListApi'
 
+//import css
+import '../../Styles/gamelist.css'
+
 function GameListPage() {
     // state
     const [gameslist, setGamelist] = useState({ data: [] })
@@ -25,22 +28,23 @@ function GameListPage() {
     }, []);
 
     return (
-        <div>
-            <Container className='my-5'>
+        <body>
+            <Container className='my-5 container'>
                 {gameslist.data.map(function (data) {
                     return (
                         <Card
                             style={{
                                 width: '18rem',
                                 height: '18rem',
-                                margin: '5px'
-                            }}
+                                margin: '10px',
+                                color: ' #29262d'
+                            }} className='cardClass'
                         >
                             <img
                                 alt="Sample"
                                 src={data.game_image_url}
                             />
-                            <CardBody>
+                            <CardBody className='cardClass'>
                                 <CardTitle tag="h5">
                                     {data.game_name}
                                 </CardTitle>
@@ -55,7 +59,7 @@ function GameListPage() {
                     )
                 })}
             </Container>
-        </div>
+        </body>
     );
 }
 

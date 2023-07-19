@@ -1,12 +1,12 @@
 import React from "react";
 import {  } from "reactstrap";
 
-function ProfilePage() {
+function LoginPage() {
     return (
         <div>
-            HIIIIIIIIIIIaaa
+            THIS LOGIN PAGE
         </div>
     )
 }
 
-export default ProfilePage;
+export default LoginPage

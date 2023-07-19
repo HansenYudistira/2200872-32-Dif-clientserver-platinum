@@ -12,9 +12,9 @@ function Router() {
     return (
         <Routes>
             <Route path="/" Component={LandingPage}/>
-            <Route path="/ProfilePage" Component={ProfilePage} />
             <Route path="/Community" Component={Community} />
             <Route path="/GameList" Component={GameListPage} />
+            <Route path="/profilePage" Component={ProfilePage} />
         </Routes>
     )
 }

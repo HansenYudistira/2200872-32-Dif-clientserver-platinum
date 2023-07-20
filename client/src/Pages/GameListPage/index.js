@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardBody, CardTitle, CardText, Button, Container } from "reactstrap";
-
 import { gameListApi } from '../../api/gameListApi'
 
 //import css

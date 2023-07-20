@@ -15,11 +15,12 @@ function Router() {
     return (
         <Routes>
             <Route path="/" Component={LandingPage}/>
-            <Route path="/ProfilePage" Component={ProfilePage} />
+            <Route path="/Community" Component={Community} />
+            <Route path="/GameList" Component={GameListPage} />
+            <Route path="/profilePage" Component={ProfilePage} />
             <Route path="/registerPage" component={RegisterPage} />
             <Route path="/loginPage" component={LoginPage} />
             <Route path="/community" Component={Community} />
-            <Route path="/Community" Component={Community} />
             <Route path="/gamelist" Component={GameListPage} />
             <Route path="/About-us" Component={AboutUs} />  
             <Route path="/rps" Component={RockPaperScissorsPage} />  

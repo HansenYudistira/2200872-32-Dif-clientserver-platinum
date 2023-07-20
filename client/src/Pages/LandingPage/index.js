@@ -1,16 +1,17 @@
 import React from 'react';
+import {  } from "reactstrap";
+import Sidebar from '../../Component/Sidebar';
 
 //import components
 import LandingPageHeader from '../../Component/LandingPage/header';
 import WelcomeCard from '../../Component/LandingPage/welcome';
 import PopularGames from '../../Component/LandingPage/popularGames';
 import LeaderBoard from '../../Component/LandingPage/leaderboard';
-import Sidebar from '../../Component/Sidebar';
 
 //import css
 import '../../Styles/LandingPages/landingPage.css'
 
-function LandingPage() {
+const LandingPage = () => {
   return (
     <body>
       <div class="background"> 

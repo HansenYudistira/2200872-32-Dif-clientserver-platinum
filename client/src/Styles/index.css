@@ -1,14 +1,45 @@
+<<<<<<< HEAD
+ body {
+    color: black;
+    animation: colorAnimation 5s infinite alternate;
+=======
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
+>>>>>>> 5ab59f566bbf55895d66ffcc7447b01817de4aff
 }
+  
+@keyframes colorAnimation {
+  0% {
+    background-color: khaki;
+  }
+  20% {
+    background-color: palegreen;
+  }
+  40% {
+    background-color: black;
+  }
+  60%{
+    background-color: indianred;
+  }
+  80% {
+    background-color: plum;
+  }
 
+<<<<<<< HEAD
+  100% {
+    background-color: salmon;
+  }
+}
+=======
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+>>>>>>> 5ab59f566bbf55895d66ffcc7447b01817de4aff

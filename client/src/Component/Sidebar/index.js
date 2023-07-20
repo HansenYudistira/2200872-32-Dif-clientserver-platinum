@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../../Styles/sidebar.css';
+import '../../Styles/LandingPages/sidebar.css';
 import {
   FaHome,
   FaUserFriends,
+  FaInfo,
   FaShareAlt
 } from "react-icons/fa";
-import {
-    PiCloudWarningThin,
-    PiEnvelopeLight,
-  } from "react-icons/pi";
   
 
 const Sidebar = ({ children }) => {
@@ -34,12 +31,7 @@ const Sidebar = ({ children }) => {
     {
       path: "/about-us",
       name: "About Us",
-      icon: <PiCloudWarningThin color="black" />,
-    },
-    {
-      path: "/social",
-      name: "Social Media",
-      icon: <PiEnvelopeLight color="black" />,
+      icon: <FaInfo color="black" />,
     },
     {
       path: "/share",

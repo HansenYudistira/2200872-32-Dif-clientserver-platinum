@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button, Container } from "reactstrap";
-
+import { Card, CardBody, CardTitle, CardText, Button, Container } from "reactstrap";
 import { gameListApi } from '../../api/gameListApi'
+
+//import css
+import '../../Styles/gamelist.css'
 
 function GameListPage() {
     // state
@@ -25,37 +27,38 @@ function GameListPage() {
     }, []);
 
     return (
-        <div>
-            <Container className='my-5'>
+        <body>
+            <Container className='my-5 container'>
                 {gameslist.data.map(function (data) {
                     return (
                         <Card
                             style={{
                                 width: '18rem',
                                 height: '18rem',
-                                margin: '5px'
-                            }}
+                                margin: '10px',
+                                color: ' #29262d'
+                            }} className='cardClass'
                         >
                             <img
                                 alt="Sample"
-                                src='../../../public/images/game/rps.png'
+                                src={data.game_image_url}
                             />
-                            <CardBody>
+                            <CardBody className='cardClass'>
                                 <CardTitle tag="h5">
-                                    {data.gameName}
+                                    {data.game_name}
                                 </CardTitle>
                                 <CardText>
-                                    {data.gameDescription}
+                                    {data.game_description}
                                 </CardText>
                                 <Button>
-                                    Play Now
+                                    {data.game_url}
                                 </Button>
                             </CardBody>
                         </Card>
                     )
                 })}
             </Container>
-        </div>
+        </body>
     );
 }
 

@@ -1,77 +1,59 @@
-// import React from 'react';
-import React, { useState } from 'react';
-import { Button, UncontrolledTooltip } from 'reactstrap';
-import { FaUserCircle, FaRegFileAlt } from "react-icons/fa";
-import Sidebar from '../../Component/Sidebar';
+import React from "react";
 
-//import components
-import LandingPageHeader from '../../Component/LandingPage/header';
-import WelcomeCard from '../../Component/LandingPage/welcome';
-import PopularGames from '../../Component/LandingPage/popularGames';
-import LeaderBoard from '../../Component/LandingPage/leaderboard';
-import CommingSoon from '../../Component/CommingSoon';
+// import reactstrap
+import { 
+    Card,CardBody,CardTitle,CardSubtitle,Container
+} from "reactstrap";
 
-//import css
-import '../../Styles/LandingPages/landingPage.css'
-import ProfileModal from './Modal';
+// import css
+import "../../Styles/profilePage.css"
 
+// import component
+import Header from "../../Component/ProfilePage/Header";
+import Modal from "../../Component/ProfilePage/Modal";
+import Footer from "../../Component/ProfilePage/Footer";
 
-const ProfilePage = () => {
-  return (
-    <body>
-      <div class="background"> 
-        <div className="container">      
-          <div style={{ display: 'flex' }}>
-            <Sidebar />  
-            <div className='content-area d-flex flex-column' >
-              <div className='header-area'>
-                <LandingPageHeader />
-              </div>
-              <div className='section-area d-flex'>
-                <div className='inner-section d-flex flex-column'>
-                <div>
-            <div className="welcome-card">
-                <div className="p-3 d-flex justify-content-between">
-                    <div className="mx-3">
-                        <h2>Welcome, (Username)</h2>
-                       <ProfileModal />
-                    </div>
-                    <div className="mt-2 d-flex">
-                        <a href="/register">
-                            <Button color="link" className="mx-3" id="register-button">
-                                <FaRegFileAlt size={40} color="white"/>
-                            </Button>
-                            <UncontrolledTooltip placement="bottom" target="register-button">
-                                Register
-                            </UncontrolledTooltip>
-                        </a>
+// import icons
+import avatar from "../../Assets/img/avatar.jpg";
+import { IoLocationOutline } from "react-icons/io5";
 
-                        <a href="/login">
-                            <Button color="link" className="mx-3" id="login-button">
-                                <FaUserCircle size={40} color="white"/>
-                            </Button>
-                            <UncontrolledTooltip placement="bottom" target="login-button">
-                                Login
-                            </UncontrolledTooltip>
-                        </a>
-                    </div>
+function ProfilePage() {
+   
+    return (
+        <div className="bgProfile">
+            <Container style={{ justifyContent: "center"}}>
+                <div className="cardProfile">
+                    <Card  body outline color='dark'
+                        className="bgCard"
+                    >
+                        <Header />
+                        <div className="d-flex justify-content-center">
+                            <img alt="" src={avatar} className="styleAvatar" />  
+                        </div> 
+                        <CardBody>
+                            <CardTitle tag="h5" className="text-center">
+                                NOURAFNI_
+                            </CardTitle>
+                            <CardSubtitle
+                                className="mb-4 text-muted text-center"
+                                tag="h6"
+                            >
+                                nourafni@gmail.com
+                            </CardSubtitle>
+                            <div style={{ marginBottom: "70px" }}>
+                                {/* <p><IoLocationOutline/> malang,indonesia</p> */}
+                            </div>
+                            <Modal />
+                            <Footer />
+                        </CardBody>
+                    </Card>
                 </div>
-            </div>
-        </div>
-                  <PopularGames />
-                  <LeaderBoard />
-                </div>
-                  <div className='comming-soon'>
-                    <CommingSoon />
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </body> 
+            </Container>
+        </div>              
   );
 }
-
-
+    
 export default ProfilePage;
+
+
+    

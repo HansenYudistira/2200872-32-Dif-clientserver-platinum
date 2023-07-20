@@ -12,7 +12,6 @@ import CommingSoon from '../../Component/CommingSoon';
 //import css
 import '../../Styles/LandingPages/landingPage.css'
 
-
 const LandingPage = () => {
   return (
     <body>

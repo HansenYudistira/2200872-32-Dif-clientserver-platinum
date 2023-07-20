@@ -9,6 +9,7 @@ import LoginPage from "../Pages/LoginPage";
 import Community from "../Pages/Community";
 import GameListPage from "../Pages/GameListPage";
 import AboutUs from "../Pages/AboutUs";
+import RockPaperScissorsPage from "../Pages/RockPaperScissorsPage";
 
 function Router() {
     return (
@@ -21,6 +22,7 @@ function Router() {
             <Route path="/Community" Component={Community} />
             <Route path="/gamelist" Component={GameListPage} />
             <Route path="/About-us" Component={AboutUs} />  
+            <Route path="/rps" Component={RockPaperScissorsPage} />  
         </Routes>
     )
 }

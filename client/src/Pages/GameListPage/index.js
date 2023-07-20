@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button, Container } from "reactstrap";
-
+import { Card, CardBody, CardTitle, CardText, Button, Container } from "reactstrap";
 import { gameListApi } from '../../api/gameListApi'
 
 //import css
@@ -42,17 +41,17 @@ function GameListPage() {
                         >
                             <img
                                 alt="Sample"
-                                src='/images/game/rps.png'
+                                src={data.game_image_url}
                             />
                             <CardBody className='cardClass'>
                                 <CardTitle tag="h5">
-                                    {data.gameName}
+                                    {data.game_name}
                                 </CardTitle>
                                 <CardText>
-                                    {data.gameDescription}
+                                    {data.game_description}
                                 </CardText>
                                 <Button>
-                                    {data.gameUrl}
+                                    {data.game_url}
                                 </Button>
                             </CardBody>
                         </Card>

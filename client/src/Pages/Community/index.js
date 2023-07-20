@@ -12,22 +12,26 @@ import CommingSoon from '../../Component/CommingSoon';
 
 const Community = () => {
   return (
-      <div className="background">
-        <div className="container">
-          <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-            <div className="main">
-              <Sidebar />
-              <div className="table-container">
-                <Table />
-              </div>
-                <CommingSoon />
-              </div>
+    <div className="background">
+      <div className="container">
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+          <div className="main" style={{ display: 'flex', flexDirection: 'row' }}>
+            <Sidebar />
+            <div className="table-container" style={{ flexGrow: 1 }}>
+              <Table />
             </div>
-            <Footer />
+            <div className='comming-soon' style={{ flexGrow: 0 }}>
+              <CommingSoon />
+            </div>
           </div>
-        </div>      
+        </div>
+        <Footer />
+      </div>
+    
+    </div>
   );
 }
+
 
 
 export default Community;

@@ -5,7 +5,8 @@ import {
   FaHome,
   FaUserFriends,
   FaInfo,
-  FaShareAlt
+  FaShareAlt,
+  FaUser
 } from "react-icons/fa";
   
 
@@ -22,6 +23,11 @@ const Sidebar = ({ children }) => {
       path: "/",
       name: "Homepage",
       icon: <FaHome color="black" />,
+    },
+    {
+      path: "/ProfilePage",
+      name: "Profile",
+      icon: <FaUser color="black" />,
     },
     {
       path: "/community",

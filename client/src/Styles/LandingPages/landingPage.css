@@ -26,13 +26,13 @@ body {
 .header-area {
     margin-top:20px;
     margin-bottom: 10px;
-    max-width: 100%;
+    width: 1150px;
     height:35vh;
 }
 
 .header-card {
     padding: 10px;
-    width: 100% ;
+    width: 1050px ;
     max-height: 100%;
     background: #200147;
     color: #fff;
@@ -44,13 +44,15 @@ body {
     height: 100%;
 }
 
-
 .carousel-main {
-    padding-top:20px;
+    /* padding-top:20px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1300px;
+    width: 1000px;
+}
+.carousel-status{
+    margin-right: 150px;
 }
 
 .carousel-container {
@@ -68,6 +70,10 @@ body {
     font-size: large;
 }
 
+.carousel-image{
+    margin-left:0px;
+
+}
 
 .section-area {
     margin-top: 10px;
@@ -75,13 +81,20 @@ body {
 
 .inner-section {
     width: 75%;
-    
 }
 
 .welcome-card {
-    width:100%;
+    width:1050px;
     background: #40058A;
     color: #fff;
     border-radius: 25px;
     justify-content: center;
-} 
+}
+.comming-soon{
+    margin-top: 200px;
+    position:static;
+}
+
+.flex-column{
+    max-width: 1200px;
+}

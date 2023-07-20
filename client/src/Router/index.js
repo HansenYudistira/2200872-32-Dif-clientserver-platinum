@@ -1,19 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-// Pages
-import LandingPage from "../Pages/LandingPage";
-import ProfilePage from "../Pages/ProfilePage";
+// IMPORT PAGES
 import RegisterPage from "../Pages/RegisterPage";
 import LoginPage from "../Pages/LoginPage";
+import NotFound from "../Pages/NotFound";
 
 function Router() {
     return (
         <Routes>
-            <Route path="/" Component={LandingPage}/>
-            <Route path="/ProfilePage" Component={ProfilePage} />
-            <Route path="/registerPage" component={RegisterPage} />
-            <Route path="/loginPage" component={LoginPage} />
+            <Route path="/register" Component={RegisterPage}/>
+            <Route path="/login" Component={LoginPage}/>
+            <Route path="*" Component={NotFound}/>
         </Routes>
     )
 }

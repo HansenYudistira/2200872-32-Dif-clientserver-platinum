@@ -41,28 +41,31 @@ const leaderList = [
 
 
 
-function LeaderBoard() {
-
+  function LeaderBoard() {
     return (
+      <div>
         <div>
-            <div>
-                <div className="mt-4 text-light d-flex justify-content-between">
-                    <h2>LEADERBOARD</h2>
-                    <a href="/community" className="fst-italic text-decoration-underline">{"See all >>>"}</a>
-                </div>
-
-                <div className="d-flex justify-content-between">
-                    {leaderList.map((leader, leaderIndex) => (
-                        <div key={leaderIndex}>
-                            <Card
-                                outline
-                                style={{
-                                    width: '11rem',
-                                    textAlign: "center",
-                                    backgroundColor: "#200147",
-                                    borderRadius:"25px"
-                                }}
-                                >
+          <div className="mt-4 text-light d-flex">
+            <h2 style={{ marginRight: "540px" }}>LEADERBOARD</h2>
+            <a href="/community" className="fst-italic text-decoration-underline">
+              {"See all >>>"}
+            </a>
+          </div>
+  
+          <div className="d-flex flex-wrap justify-content-start">
+            {leaderList.map((leader, leaderIndex) => (
+              <div key={leaderIndex}>
+                <Card
+                  outline
+                  style={{
+                    width: "9rem",
+                    textAlign: "center",
+                    backgroundColor: "#200147",
+                    borderRadius: "25px",
+                    marginLeft: "25px",
+                    marginBottom: "20px",
+                  }}
+                >
                                 <img
                                     className="p-1"
                                     style={{
@@ -97,13 +100,12 @@ function LeaderBoard() {
                                         </div>
                                     </CardSubtitle>
                                 </CardBody>
-                            </Card>
-                        </div>
-                    ))};
-                </div>
+                        </Card>
             </div>
+          ))}
         </div>
-    )
-};
-
+      </div>
+    </div>
+  );
+}
 export default LeaderBoard;

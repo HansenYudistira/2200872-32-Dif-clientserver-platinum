@@ -30,54 +30,59 @@ const gameList = [
       title: "Game #5",
       alt: "image5",
       url: "https://moneyinc.com/wp-content/uploads/2018/11/Willow-750x500.jpg"
-    }
+    },
   ];
 
 
-function PopularGames() {
+  function PopularGames() {
+    const filteredGameList = gameList.slice(0, 5);
+  
     return (
-        <div>
-            <div className="mt-4 text-light d-flex justify-content-between">
-                <h2>POPULAR GAMES</h2>
-                <a href="/gamelist" className="fst-italic text-decoration-underline">{"See all >>>"}</a>
-            </div>
-
-            <div className="d-flex justify-content-between">
-                {gameList.map((game, gameIndex) => (
-                    <div key={gameIndex}> 
-                        <Card
-                            outline
-                            style={{
-                                width: '11rem',
-                                textAlign: "center",
-                                backgroundColor: "#200147"  ,
-                                borderRadius:"25px"
-                            }}
-                            >
-                            <img
-                                className="p-1"
-                                style={{
-                                    borderTopRightRadius:"25px",
-                                    borderTopLeftRadius:"25px",
-                                }}
-                                alt={game.alt}
-                                src={game.url}
-                            />
-                            <CardBody>
-                                <CardTitle
-                                    className="h5 text-light"> 
-                                    Card title
-                                </CardTitle>
-                                <button className="carousel-button mt-3">
-                                    PLAY!
-                                </button>
-                            </CardBody>
-                        </Card>
-                    </div>
-                ))};
-            </div>
+      <div className="popular-game">
+        <div className="mt-4 text-light d-flex">
+          <h2 style={{ marginRight: "auto" }}>POPULAR GAMES</h2>
+          <a href="/gamelist" className="fst-italic text-decoration-underline">
+            {"See all >>>"}
+          </a>
         </div>
-    )
-};
-
-export default PopularGames;
+  
+        <div className="d-flex game-container">
+          {filteredGameList.map((game, gameIndex) => (
+            <div key={gameIndex}>
+              <Card
+                outline
+                style={{
+                  width: "9rem",
+                  textAlign: "center",
+                  backgroundColor: "#200147",
+                  borderRadius: "25px",
+                  marginLeft: "25px",
+                  marginBottom: "20px",
+                }}
+              >
+                <img
+                  className="p-1"
+                  style={{
+                    borderTopRightRadius: "25px",
+                    borderTopLeftRadius: "25px",
+                  }}
+                  alt={game.alt}
+                  src={game.url}
+                />
+                <CardBody>
+                  <CardTitle className="h5 text-light">
+                    {game.title}
+                  </CardTitle>
+                  <button className="carousel-button mt-3">
+                    PLAY!
+                  </button>
+                </CardBody>
+              </Card>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+  
+  export default PopularGames;

@@ -30,8 +30,8 @@ const imageData = [
 const renderSlides = imageData.map((image) => (
   <div key={image.alt} className="mb-5" style={{width:"100%"}}>
     <div className="d-flex justify-content-evenly">
-        <div>
-            <img src={image.url} alt={image.alt} style={{width:"500px", height:"250px"}}/>  
+        <div className="carousel-image">
+            <img src={image.url} alt={image.alt} style={{width:"500px", height:"200px"}}/>  
         </div>
         <br />
         <div className="d-flex flex-column justify-content-center align-items-center">

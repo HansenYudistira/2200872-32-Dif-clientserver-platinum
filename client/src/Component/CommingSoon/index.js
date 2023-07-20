@@ -1,14 +1,13 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
 
 import '../../Styles/commingSoon.css';
 
 function CommingSoon() {
   return (
     <div>
-      <Card style={{ width: '18rem' }}>
-      <Card.Title>Comming Soon</Card.Title>
+      <Card style={{ width: "18rem" }}>
+        <Card.Title>Coming Soon</Card.Title>
         <Card.Img variant="top" src="./images/games1.png" />
         <Card.Text>
         The World’s #1 multiplayer pool game!
